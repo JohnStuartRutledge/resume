@@ -1,0 +1,11 @@
+# TEAM
+    Creator: John Stuart Rutledge
+
+# THANKS
+
+
+# SITE
+    Last update: 2012/10/12
+    Language: English
+    Technologies: HTML5, CSS3, jQuery, Modernizr
+    IDE: Sublime Text 2

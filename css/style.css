@@ -1,0 +1,90 @@
+
+body {
+    background-image: url(../img/egg_shell.png);
+    background-repeat: repeat;
+}
+
+/*
+.container {
+    font-family: Baskerville, "Times New Roman", serif;
+    line-height: 1.2;
+    font-size: 14px;
+}
+*/
+
+.obfuscate {
+    display: none;
+}
+
+footer {
+    margin: 20px auto 0;
+    border-top: 1px solid #000;
+    padding: 20px 20px 150px;
+    text-align: center;
+}
+
+#main-title {
+    margin: 30px 0;
+    font-family: 'PT Serif', serif;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 3px 3px 3px #aaa;
+}
+
+.main-section {
+    padding-bottom: 50px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    margin: 20px 0 50px;
+}
+
+.section-title:before,
+.section-title:after {
+    content: "–";
+}
+
+.foot-item-wrapper {
+    height: 20px;
+    display: block;
+    float: left;
+    margin: 0 30px;
+}
+
+.foot-item-wrapper i {
+    margin-right: 5px;
+}
+
+.foot-item-wrapper address {
+    margin: 0 !important;
+    height: 20px !important;
+    float: left;
+}
+
+/*=========================================================
+                        D3 Graph
+=========================================================*/
+
+svg {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#work_timeline {
+    height: 100px;
+    width: 100%;
+    margin: 25px auto 0;
+}
+
+.timeline_text {
+    color: #333;
+    font-size: 1.5em;
+    font-family: 'PT Serif', Baskerville, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.animating {
+    color: tomato !important;
+}
