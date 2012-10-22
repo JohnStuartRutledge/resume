@@ -7,7 +7,7 @@
 // set width, height, and the data you will be displaying
 var w = window.innerWidth,
     h = 100,
-    mydata = ['Dec 2005', '2005 - 2007', '2007 - 2009', '2010 - 2012']; 
+    mydata = ['Dec 2005', '2005 - 2007', '2007 - 2009', '2010 - 2012'];
 
 // function for mapping the circles evenly across the line
 var scale = d3.scale.linear()
@@ -35,7 +35,7 @@ var bubble = svg.selectAll(".bubble")
     .enter().append('g')
     .attr('class', 'bubble')
     .attr('transform', function(d, i){
-       return 'translate('+ scale(i) +','+ h/2 +')'; 
+       return 'translate('+ scale(i) +','+ h/2 +')';
     });
 
 // plot circles uniformly across the line
@@ -90,7 +90,7 @@ bubble.append("text")
     .text(function(d) { return d; });
 
 //----------------------------------------------------------------------------
-// Animation Functions for holding transitional states 
+// Animation Functions for holding transitional states
 //----------------------------------------------------------------------------
 
 // rotate the text and scale it up
@@ -107,11 +107,46 @@ function textFade() {
     d3.select(this)
         .transition().duration(100)
         .attr('transform', 'translate(0, 15) scale(1)')
-        .each('end', function(){ 
+        .each('end', function(){
             d3.select(this).transition().duration(800)
             .style('fill', 'gray');
         });
 }
 
+//=============================================================================
+// SKILLS BARCHART
+//=============================================================================
+
+var skills = [
+    ['Python', 90],
+    ['HTML', 100],
+    ['CSS', 100],
+    ['Javascript', 80],
+    ['Coffeescript', 50],
+    ['PHP', 70],
+    ['Actionscript', 44],
+    ['Clojure', 21]
+];
+
+// create the root element for holding our barchart
+var barchart = d3.select("#skills_barchart")
+    .append("div")
+    .attr("class", "barchart_wrapper");
+
+// create the container for holding the text and bars
+var bars = barchart.selectAll("div")
+    .data(skills).enter()
+    .append("div")
+    .attr("class", "bar_container");
+
+// add the span with our text
+bars.append("span").attr("class", "bar_txt")
+    .text(function(d) { return d[0]; });
+
+// add the html for our individual bars.
+bars.append("div").attr("class", "bar_wrapper")
+    .append("span")
+    .attr("class", "a_bar")
+    .style("width", function(d) { return d[1] + "%";});
 
 }).call(this);

@@ -18,13 +18,25 @@
     <div class="container">
         <header>
             <h1 id="main-title">John Stuart Rutledge</h1>
+            <p>Curriculum Vitae</p>
         </header>
         <hr>
 
         <!--///////////////////////////////////////////////////////////////-->
         <div class="row main-section">
             <div class="span12">
-                <p>illusion here</p>
+                <div id="illusion">
+                    <!--
+insert two illusion images here:
+    one where the fish is swimming downward
+    one where the fish is swimming upwards
+
+when we detect that the browser is scrolling downward we will increase
+the z-index of the downward img. When we detect the browser scrolling
+upward we increase the z-index of the upward img.
+                    -->
+                    <p>illusion here</p>
+                </div>
             </div>
         </div>
         <hr>
@@ -35,10 +47,11 @@
             <div class="span4">
                 <h4>St. Edwards University</h4>
                 <p>Bachelor of Psychology Austin, TX &mdash; Dec, 05</p>
+                <p>Graduated with honors</p>
             </div>
             <div class="span4">
                 <h4>Stanford University AI Class</h4>
-                <p>Graduted Standford AI class <a href="#">link</a></p>
+                <p>Graduted Standford AI class <a href="https://www.ai-class.com/overview">link</a></p>
             </div>
         </div>
 
@@ -46,7 +59,7 @@
 
         <!--///////////////////////////////////////////////////////////////-->
         <div class="row main-section">
-            <h2 class="section-title">Experience</h2>
+            <h2 id="experience" class="section-title">Experience</h2>
             <div id="work_timeline"></div>
             <div class="span3">
                 <h4>Bling Media</h4>
@@ -81,21 +94,12 @@
         <div class="row main-section">
             <h2 class="section-title">Skills</h2>
 
-            <div class="span3">
+            <div class="span5">
                 <strong>Code</strong>
-                <ul>
-                    <li>Python</li>
-                    <li>PHP</li>
-                    <li>Javascript</li> <!-- on rollover popup libraries you know -->
-                    <li>Coffeescript</li>
-                    <li>Clojure</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Actionscript</li>
-                </ul>
+                <div id="skills_barchart"></div>
             </div>
 
-            <div class="span3">
+            <div class="span2">
                 <strong>Frameworks</strong>
                 <ul>
                     <li><a href="https://www.djangoproject.com">Django</a></li>
@@ -109,8 +113,8 @@
                 </ul>
             </div>
 
-            <div class="span3">
-                <strong>APIs I've Worked With</strong>
+            <div class="span2">
+                <strong>APIs</strong>
                 <ul>
                     <li>Facebook</li>
                     <li>Twitter</li>
@@ -121,18 +125,19 @@
                 </ul>
             </div>
 
-            <div class="span3">
+            <div class="span2">
                 <strong>Other</strong>
                 <ul>
-                    <li>Photoshop</li>
-                    <li>Maya (Modeling &amp; Lighting)</li>
-                    <li>3D Studio Max</li>
-                    <li>ZBrush</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe Illustrator</li>
+                    <li>Adobe Fireworks</li>
                     <li>Adobe Premiere</li>
                     <li>Adobe Aftereffects</li>
+                    <li>Maya</li>
+                    <li>3D Studio Max</li>
+                    <li>ZBrush</li>
                     <li>Flash</li>
                     <li>Abelton Live</li>
-                    <li>Reason</li>
                 </ul>
             </div>
 
@@ -143,9 +148,35 @@
         <!--///////////////////////////////////////////////////////////////-->
         <div class="row main-section">
             <h2 class="section-title">Portfolio</h2>
-            <p>example projects here, broken down by: graphic design, backend, frontend</p>
-            <p>link to github code</p>
             <div class="span10 offset1">
+            <h4>Code</h4>
+            <ul class="thumbnails">
+                <li class="span2"><a href="#" class="thumbnail">
+                    <img class="img-circle" src="http://placehold.it/260x260"></a>
+                </li>
+                <li class="span2"><a href="#" class="thumbnail">
+                    <img class="img-circle" src="http://placehold.it/260x260"></a>
+                </li>
+                <li class="span2"><a href="#" class="thumbnail">
+                    <img class="img-circle" src="http://placehold.it/260x260"></a>
+                </li>
+                <li class="span2"><a href="#" class="thumbnail">
+                    <img class="img-circle" src="http://placehold.it/260x260"></a>
+                </li>
+                <li class="span2"><a href="#" class="thumbnail">
+                    <img class="img-circle" src="http://placehold.it/260x260"></a>
+                </li>
+            </ul>
+            </div>
+<!--
+Handana
+humpback junk
+a world for children
+Mass relevance
+Best Buy
+-->
+            <div class="span10 offset1">
+            <h4>Design</h4>
             <ul class="thumbnails">
                 <li class="span2"><a href="#" class="thumbnail">
                     <img class="img-circle" src="http://placehold.it/260x260"></a>
@@ -219,8 +250,8 @@
     <!--//////////////////////////////////////////////////////////////////////////
                                     JAVSCRIPT
     ///////////////////////////////////////////////////////////////////////////-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
     <script src="js/d3.v2.min.js"></script>
     <script src="js/resume.js"></script>
     <script src="js/realshadow-min.js"></script>
