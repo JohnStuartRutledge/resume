@@ -23,6 +23,20 @@ header p {
     text-align: center;
 }
 
+#stu_photo_container {
+    position: relative;
+}
+
+#stu_photo {
+    z-index: 10;
+    position: absolute;
+    background: url('../img/stu.png') 0 0 no-repeat;
+    width: 175px;
+    height: 543px;
+    top: -144px;
+    left: 56px;
+}
+
 .obfuscate {
     display: none;
 }
