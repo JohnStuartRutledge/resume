@@ -1,8 +1,45 @@
 (function () {
 
-//----------------------------------------------------------------------------
+//============================================================================
+//                           SCROLL ILLUSION
+//============================================================================
+
+var docheight = $(document).height(),
+    winheight = $(window).height();
+
+
+$(window).scroll(function () {
+    var wintop = $(window).scrollTop(),
+        ratio  = docheight / wintop,
+        barbox = $('#illusion_bars');
+
+    barbox.height(function() {
+        return ratio * 40;
+    });
+
+    if (ratio < 5) {
+        barbox.hide();
+    } else {
+        barbox.show();
+    }
+});
+
+// TODO
+/*
+  randomize the background for each bar a little
+
+  make sure the image cover expands and shrinks relative
+  to the height of the screen such that it is always covering
+  the animation. NOTE: there might be a better way
+
+  mathmatically calculate your fish animation to be 24fps
+  relative to the average scroll speed down the page
+
+*/
+
+//============================================================================
 //                         EXPERIENCE TIMELINE
-//----------------------------------------------------------------------------
+//============================================================================
 
 // set width, height, and the data you will be displaying
 var w = window.innerWidth,
@@ -148,5 +185,7 @@ bars.append("div").attr("class", "bar_wrapper")
     .append("span")
     .attr("class", "a_bar")
     .style("width", function(d) { return d[1] + "%";});
+
+
 
 }).call(this);

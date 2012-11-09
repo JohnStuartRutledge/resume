@@ -21,20 +21,57 @@ header p {
 
 #illusion {
     text-align: center;
+    width: 100%;
+}
+
+#illusion_bars {
+    width: 80%;
+    height: 90%;
+    position: fixed;
+    margin: 0 auto;
+    z-index: 30;
+    overflow: hidden;
+}
+
+.bar_black {
+    height: 14px;
+    width: 460px;
+    background: url(../img/egg_shell.png) repeat-x;
+    margin: 1px auto 0;
+}
+
+#illusion img {
+    z-index: 1;
+    /*
+    min-width: 800px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: roatate(90deg);
+    */
 }
 
 #stu_photo_container {
-    position: relative;
+    width: 0;
+    height: 0;
+    float: left;
+    margin: 0;
+    padding: 0;
 }
 
 #stu_photo {
-    z-index: 10;
-    position: absolute;
     background: url('../img/stu.png') 0 0 no-repeat;
+    position: relative;
     width: 175px;
     height: 543px;
-    top: -144px;
-    left: 56px;
+    bottom: 564px;
+    left: 100px;
+}
+
+.modal.large {
+    height: 600px;
+    max-height: 700px;
+    width: 780px;
+    margin-left: -390px; /* - width/2 */
 }
 
 .obfuscate {
