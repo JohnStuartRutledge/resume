@@ -5,37 +5,31 @@
 //============================================================================
 
 var docheight = $(document).height(),
-    winheight = $(window).height();
+    winheight = $(window).height(),
+    winwidth  = $(window).width(),
+    barbox    = $('#illusion_bars');
+    new_xpos  = 0,
+    bar_count = Math.round(winwidth / 15)*2, // double the screen width
+    offset    = -Math.round(winwidth/2),
+    bg_options = ['01', '02', '03'];
 
+// set initial position of the bar box off screen to the right
+barbox.css('right', offset);
 
-$(window).scroll(function () {
-    var wintop = $(window).scrollTop(),
-        ratio  = docheight / wintop,
-        barbox = $('#illusion_bars');
+// append the proper number of bars needed to cover the screen width.
+for(var i=1; i < bar_count; i++) {
+    $('<div>')
+        .attr('class', 'bar_black')
+        .css('background', 'url(../img/egg_shell_'+bg_options[Math.floor(Math.random()*3)]+'.png) repeat-y')
+        .appendTo('#illusion_bars');
+}
 
-    barbox.height(function() {
-        return ratio * 40;
-    });
-
-    if (ratio < 5) {
-        barbox.hide();
-    } else {
-        barbox.show();
-    }
+// function that horizontally moves the bars and creates the animated illusion
+$(document).scroll(function() {
+    xpos = $(document).scrollTop();
+    barbox.css('right', offset + xpos);
+    new_xpos = offset + xpos;
 });
-
-// TODO
-/*
-  randomize the background for each bar a little
-
-  make sure the image cover expands and shrinks relative
-  to the height of the screen such that it is always covering
-  the animation. NOTE: there might be a better way
-
-  mathmatically calculate your fish animation to be 24fps
-  relative to the average scroll speed down the page
-
-*/
 
 //============================================================================
 //                         EXPERIENCE TIMELINE
@@ -53,7 +47,8 @@ var scale = d3.scale.linear()
 
 // generate the SVG timeline that will serve as the project canvas
 var svg = d3.select("#work_timeline").append("svg")
-    .attr("viewBox", "0 0 "+ w +" "+ h )
+    //.attr("height", h)
+    .attr("viewBox", "0 0 "+ w +" "+ h)
     .attr("preserveAspectRatio", "YMin")
     .attr('id', 'stu_timeline');
 
@@ -71,6 +66,7 @@ var bubble = svg.selectAll(".bubble")
     .data(mydata)
     .enter().append('g')
     .attr('class', 'bubble')
+    .attr('height', h)
     .attr('transform', function(d, i){
        return 'translate('+ scale(i) +','+ h/2 +')';
     });
@@ -94,9 +90,10 @@ bubble.append("circle")
         d3.select("#text-"+i)
             .transition().duration(300)
             .attr('pointer-events', 'none') // temporarily disable mouse-over
-            .attr('transform', 'scale(2) rotate(280)')
-            .attr('dy', 40)
-            .each('end', textRotate);
+            //.attr('transform', 'scale(2) rotate(280)')
+            .attr('transform', 'scale(2)')
+            .attr('dy', 28)
+            .each('end', textMove);
 
     })
     .on("mouseout", function(d, i){
@@ -131,10 +128,11 @@ bubble.append("text")
 //----------------------------------------------------------------------------
 
 // rotate the text and scale it up
-function textRotate() {
-    d3.select(this)
-        .transition().duration(200)
-        .attr('transform', 'translate(0, 0) scale(1.5) rotate(0)')
+function textMove() {
+    d3.select(this).transition()
+        .ease("linear")
+        .duration(150)
+        .attr('transform', 'translate(0, -20) scale(1.5)')
         .each('start', function(d){ this.className = 'animating'})
         .each('end', textFade);
 }
@@ -142,8 +140,8 @@ function textRotate() {
 // scale the text back down again, and fade its color
 function textFade() {
     d3.select(this)
-        .transition().duration(100)
-        .attr('transform', 'translate(0, 15) scale(1)')
+        .transition().duration(150)
+        .attr('transform', 'translate(0, 25) scale(1)')
         .each('end', function(){
             d3.select(this).transition().duration(800)
             .style('fill', 'gray');
@@ -155,14 +153,15 @@ function textFade() {
 //=============================================================================
 
 var skills = [
-    ['Python', 90],
     ['HTML', 100],
-    ['CSS', 100],
+    ['CSS/LESS', 100],
+    ['Python', 90],
     ['Javascript', 80],
-    ['Coffeescript', 50],
     ['PHP', 70],
+    ['Coffeescript', 50],
     ['Actionscript', 44],
-    ['Clojure', 21]
+    ['Clojure', 21],
+    ['R', 20]
 ];
 
 // create the root element for holding our barchart

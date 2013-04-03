@@ -1,6 +1,6 @@
 
 body {
-    background-image: url(../img/egg_shell.png);
+    background-image: url(../img/egg_shell_01.png);
     background-repeat: repeat;
 }
 
@@ -25,20 +25,26 @@ header p {
 }
 
 #illusion_bars {
-    width: 80%;
-    height: 90%;
-    position: fixed;
+    height: 302px;
+    position: absolute;
     margin: 0 auto;
     z-index: 30;
     overflow: hidden;
 }
 
 .bar_black {
-    height: 14px;
-    width: 460px;
-    background: url(../img/egg_shell.png) repeat-x;
-    margin: 1px auto 0;
+    height: 302px;
+    width: 14px;
+    background: url(../img/egg_shell_01.png) repeat-y;
+    float: right;
+    margin: 0px 1px 0px 0px;
 }
+
+/*
+.bar_black:nth-child(4n + 1) {
+    background: blue;
+}
+*/
 
 #illusion img {
     z-index: 1;
@@ -72,6 +78,10 @@ header p {
     max-height: 700px;
     width: 780px;
     margin-left: -390px; /* - width/2 */
+}
+
+.modal-body {
+    text-align: center;
 }
 
 .obfuscate {
@@ -129,10 +139,12 @@ footer {
                         D3 Graph
 =========================================================*/
 
-svg {
+#stu_timeline {
     display: block;
-    width: 100%;
+    width: 95%;
+    height: 100px;
     margin: 0 auto;
+    padding: 0;
 }
 
 #experience {
@@ -140,7 +152,7 @@ svg {
 }
 
 #work_timeline {
-    height: 150px;
+    height: 100px;
     width: 100%;
     margin: 25px auto 0;
 }
