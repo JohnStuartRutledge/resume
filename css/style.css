@@ -1,9 +1,13 @@
 
 body {
-    background-image: url(../img/egg_shell_01.png);
+    background-image: url(../img/egg_shell01.png);
     background-repeat: repeat;
+    overflow-x: hidden;
 }
 
+div {
+    word-wrap: break-word;
+}
 /*
 .container {
     font-family: Baskerville, "Times New Roman", serif;
@@ -35,7 +39,7 @@ header p {
 .bar_black {
     height: 302px;
     width: 14px;
-    background: url(../img/egg_shell_01.png) repeat-y;
+    background: url(../img/egg_shell01.png) repeat-y;
     float: right;
     margin: 0px 1px 0px 0px;
 }

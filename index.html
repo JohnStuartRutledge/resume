@@ -2,13 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="John Stuart Rutledge">
+    <meta name="description" content="Curriculum Vitae and portfolio for John Stuart Rutledge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>John Rutledge Resume</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-lightbox.min.css">
     <link rel="stylesheet" href="bootstrap/css/font-awesome.css">
 </head>
 <body>
@@ -27,7 +28,7 @@
         <div class="row main-section">
             <div class="span12">
                 <div id="illusion_bars"></div>
-                <div id="illusion"><img src="img/bobcat.png"></div>
+                <div id="illusion"><img src="img/bobcat.png" alt="optical illusion of bobcat"></div>
             </div>
         </div>
         <hr>
@@ -67,14 +68,14 @@
             </div>
             <div class="span3">
                 <h4>Engauge</h4>
-                <p>Created a Python application to generate HTML for use in Logitech's multinational
+                <p>Built Python app to generate HTML for use in Logitech's multinational
                     direct mail campaigns. Built Javascript browser plugins to assist management of LyrisHQ
                     and Cheetha Mail.</p>
             </div>
             <div class="span3">
                 <h4>MindWink</h4>
-                <p>Built and managed Django based web application. Built original D3.js graphs.
-                    Constructed multiple web spiders using Beautiful Soup and Scrapy.
+                <p>Built and managed Django based web application. Created multiple D3.js graphs.
+                    Constructed web spiders using Beautiful Soup and Scrapy.
                     Coded custom Drupal sites and modules.</p>
             </div>
         </div>
@@ -120,14 +121,14 @@
                 </ul>
             </div>
 
-            <div class="span2">
+            <div class="span3">
                 <strong>Other Software</strong>
                 <ul>
                     <li>Adobe Photoshop</li>
                     <li>Adobe Illustrator</li>
                     <li>Adobe Fireworks</li>
                     <li>Adobe Premiere</li>
-                    <li>Adobe Aftereffects</li>
+                    <li>Adobe After Effects</li>
                     <li>Adobe Flash</li>
                     <li>Maya</li>
                     <li>3D Studio Max</li>
@@ -155,13 +156,13 @@
             <div class="span2">
                 <strong>Django</strong>
                 <ul>
+                    <li>Braces</li>
+                    <li>Celery</li>
                     <li>Crispy Forms</li>
                     <li>Debug Toolbar</li>
-                    <li>Django Braces</li>
-                    <li>Django Celery</li>
-                    <li>Django Social Auth</li>
                     <li>Guardian</li>
                     <li>Knowledge</li>
+                    <li>Social Auth</li>
                     <li>South</li>
                     <li>Usernea</li>
                 </ul>
@@ -174,6 +175,7 @@
                     <li>D3</li>
                     <li>Dat-gui</li>
                     <li>Jquery</li>
+                    <li>Requirejs</li>
                     <li>Threejs</li>
                     <li>Underscore</li>
                 </ul>
@@ -185,187 +187,136 @@
 
         <!--///////////////////////////////////////////////////////////////-->
         <div class="row main-section">
+            <h2 class="section-title">Programming Portfolio</h2>
+
+            <div class="span6">
+                &nbsp;
+            </div>
+
+            <div class="span8 offset4">
+                <a href="https://github.com/mootPoint" target="_blank"><img src="img/icon-github.png" alt="Github logo" /></a>
+                <a href="http://stackoverflow.com/users/635154/john-rutledge" target="_blank"><img src="img/icon-stackoverflow.png" alt="Stackoverflow logo" /></a>
+            </div>
+
+            <!--
+            humpbackjunk Drupal Module
+            Logitech Microsite
+            Ultimate EArs Flash Campaign
+            Insight Fever Webcrawler
+            Insight Fever Django
+            Texas Stroke D3.js
+            Tweetwatch
+            -->
+        </div>
+
+        <hr>
+
+        <!--///////////////////////////////////////////////////////////////-->
+        <div class="row main-section">
             <h2 class="section-title">Design Portfolio</h2>
 
-            <div class="span10 offset1">
-            <ul class="thumbnails">
-                <li class="span2"><a href="#myModal1" data-toggle="modal" data-toggle="#myModal1" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio01_thumb.jpg"></a>
-                </li>
-                <li class="span2"><a href="#myModal2" data-toggle="modal" data-target="#myModal2" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio02_thumb.jpg"></a>
-                </li>
-                <li class="span2"><a href="#myModal3" data-toggle="modal" data-target="#myModal3" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio03_thumb.jpg"></a>
-                </li>
-                <li class="span2"><a href="#myModal4" data-toggle="modal" data-target="#myModal4" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio04_thumb.jpg"></a>
-                </li>
-                <li class="span2"><a href="#myModal5" data-toggle="modal" data-target="#myModal5" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio05_thumb.jpg"></a>
-                </li>
-            </ul>
+            <div class="span11 offset1">
+                <ul class="thumbnails">
+                    <li class="span2"><a data-toggle="lightbox" href="#designLightbox1">
+                        <img class="img-circle" src="portfolio/portfolio01_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                    <li class="span2"><a data-toggle="lightbox" href="#designLightbox2">
+                        <img class="img-circle" src="portfolio/portfolio02_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                     <li class="span2"><a data-toggle="lightbox" href="#designLightbox3">
+                        <img class="img-circle" src="portfolio/portfolio03_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                    <li class="span2"><a data-toggle="lightbox" href="#designLightbox4">
+                        <img class="img-circle" src="portfolio/portfolio04_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                    <li class="span2"><a data-toggle="lightbox" href="#designLightbox5">
+                        <img class="img-circle" src="portfolio/portfolio05_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="span10 offset1">
-            <ul class="thumbnails">
-                <li class="span2"><a href="#myModal6" data-toggle="modal" data-target="#myModal6" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio06_thumb.jpg"></a><!-- humpbackjunk Drupal -->
-                </li>
-                <li class="span2"><a href="#myModal7" data-toggle="modal" data-target="#myModal7" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio07_thumb.jpg"></a><!-- Logitech Microsite -->
-                </li>
-                <li class="span2"><a href="#myModal8" data-toggle="modal" data-target="#myModal8" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio08_thumb.jpg"></a><!-- ultimate ears flash campaign -->
-                </li>
-                <li class="span2"><a href="#myModal9" data-toggle="modal" data-target="#myModal9" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio09_thumb.jpg"></a><!-- insight fever webcrawler -->
-                </li>
-                <li class="span2"><a href="#myModal10" data-toggle="modal" data-target="#myModal10" class="thumbnail">
-                    <img class="img-circle" src="portfolio/portfolio10_thumb.jpg"></a><!-- insight fever csv app -->
-                </li>
-                <!-- texas stroke d3.js map -->
-            </ul>
+            <div class="span11 offset1">
+                <ul class="thumbnails">
+                    <li class="span2"><a data-toggle="lightbox" href="#designLightbox6">
+                        <img class="img-circle" src="portfolio/portfolio06_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                    <li class="span2"><a data-toggle="lightbox" href="#designLightbox7">
+                        <img class="img-circle" src="portfolio/portfolio07_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                     <li class="span2"><a data-toggle="lightbox" href="#designLightbox8">
+                        <img class="img-circle" src="portfolio/portfolio08_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                    <li class="span2"><a data-toggle="lightbox" href="#designLightbox9">
+                        <img class="img-circle" src="portfolio/portfolio09_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                    <li class="span2"><a data-toggle="lightbox" href="#designLightbox10">
+                        <img class="img-circle" src="portfolio/portfolio10_thumb.jpg" alt="portfolio thumbnail" /></a>
+                    </li>
+                </ul>
             </div>
 
-            <!--////// MODAL POPUP IMAGES //////-->
-
-            <div id="myModal1" class="modal container hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">My Handana</h3>
-                </div>
-                <div class="modal-body">
-                    <img src="portfolio/portfolio01.jpg">
-                </div>
-                <div class="modal-footer">
-                    <p>foot text</p>
+            <div id="designLightbox1" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
+                    <img src="portfolio/portfolio01.jpg" style="float:left;">
+                    <!--<div style="float:left;"><p>hi there, what's up</p></div>-->
                 </div>
             </div>
-
-            <div id="myModal2" class="modal hide fade large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Mass Relevance Info Graphic</h3>
-                </div>
-                <div class="modal-body">
+            <div id="designLightbox2" class="lightbox hide fade"  tabindex="-2" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
                     <img src="portfolio/portfolio02.png">
                 </div>
-                <div class="modal-footer">
-                    <p>text</p>
-                </div>
             </div>
-
-            <div id="myModal3" class="modal hide fade large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Villages at the Domain Graphic Report</h3>
-                </div>
-                <div class="modal-body">
+            <div id="designLightbox3" class="lightbox hide fade"  tabindex="-3" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
                     <img src="portfolio/portfolio03.jpg">
                 </div>
-                <div class="modal-footer">
-                    <p>text</p>
-                </div>
             </div>
-
-            <div id="myModal4" class="modal hide fade large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Mindwink Logo</h3>
-                </div>
-                <div class="modal-body">
+            <div id="designLightbox4" class="lightbox hide fade"  tabindex="-4" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
                     <img src="portfolio/portfolio04.jpg">
                 </div>
-                <div class="modal-footer">
-                    <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-                    <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
-                </div>
             </div>
-
-            <div id="myModal5" class="modal hide fade large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">TweetRiver Banner</h3>
-                </div>
-                <div class="modal-body">
+            <div id="designLightbox5" class="lightbox hide fade"  tabindex="-5" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
                     <img src="portfolio/portfolio05.png">
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-                    <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
                 </div>
             </div>
 
             <!-- Row 2 -->
 
-            <div id="myModal6" class="modal container hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Humpback Junk - Drupal</h3>
-                </div>
-                <div class="modal-body">
-                    <img src="portfolio/portfolio06.jpg">
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-                    <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+            <div id="designLightbox6" class="lightbox hide fade"  tabindex="-6" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
+                    <img src="portfolio/portfolio06.jpg" style="float:left;">
                 </div>
             </div>
-
-            <div id="myModal7" class="modal hide fade large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel7" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Logitech Email Campaign</h3>
-                </div>
-                <div class="modal-body">
+            <div id="designLightbox7" class="lightbox hide fade"  tabindex="-7" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
                     <img src="portfolio/portfolio07.jpg">
                 </div>
-                <div class="modal-footer">
-                    <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-                    <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+            </div>
+            <div id="designLightbox8" class="lightbox hide fade"  tabindex="-8" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
+                    <img src="portfolio/portfolio08.png">
                 </div>
             </div>
-
-            <div id="myModal8" class="modal hide fade large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Ultimate Ears</h3>
-                </div>
-                <div class="modal-body">
-                    <img src="portfolio/portfolio08.jpg">
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-                    <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+            <div id="designLightbox9" class="lightbox hide fade"  tabindex="-9" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
+                    <img src="portfolio/portfolio09.png">
                 </div>
             </div>
-
-            <div id="myModal9" class="modal hide fade large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel9" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">Insight Fever Webcrawler</h3>
-                </div>
-                <div class="modal-body">
-                    <img src="portfolio/portfolio09.jpg">
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-                    <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
-                </div>
-            </div>
-
-            <div id="myModal10" class="modal hide fade large" tabindex="-1" role="dialog" aria-labelledby="myModalLabel10" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                    <h3 id="myModalLabel">CSV Parser</h3>
-                </div>
-                <div class="modal-body">
+            <div id="designLightbox10" class="lightbox hide fade"  tabindex="-10" role="dialog" aria-hidden="true">
+                <div class='lightbox-header'><button type="button" class="close" data-dismiss="lightbox" aria-hidden="true">&times;</button></div>
+                <div class='lightbox-content'>
                     <img src="portfolio/portfolio10.png">
-                </div>
-                <div class="modal-footer">
-                    <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
-                    <a class="btn btn-primary modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
                 </div>
             </div>
 
@@ -378,21 +329,22 @@
             <h2 class="section-title">About Me</h2>
             <div class="span8 offset4">
             <ul>
-                <li>I'm test driven development, UNIX, SCRUM, and GIT friendly</li>
+                <li>I'm UNIX, SCRUM, GIT, and test-driven-development friendly</li>
                 <li>I code in SublimeText2 with Vintage Mode activated</li>
-                <li>I speak Japanese and play piano. Also just started getting intrested hacking on Arduino/Raspberry Pi's</li>
+                <li>I speak Japanese, play piano, and recently got into hacking on Arduino/Raspberry Pi's</li>
                 <li>I love to dance. I created and maintain the subreddit <a href="http://www.reddit.com/r/DanceTutorials">r/DanceTutorials</a>.</li>
-                <li>I'm a cliche anime, film, and comic book nerd with a superfluous knowledge of 80's pop culture</li>
+                <li>I'm a anime, film, and comic book nerd with a superfluous knowledge of 80's pop culture</li>
                 <li>I spend inordinate amounts of time on Reddit, Hacker News, and XKCD. I'm also a <a href="http://en.wikipedia.org/wiki/Quantified_Self">Quant</a>.</li>
                 <li>I advocate the <a href="http://www.python.org/dev/peps/pep-0020">Zen of Python's</a> coding philosophy</li>
                 <li>I advocate <a href="http://craphound.com/">Cory Doctorow's</a> technologist philosophy</li>
                 <li>I advocate <a href="http://worrydream.com/">Brett Victor's</a> design philosophy</li>
                 <li>I advocate <a href="http://en.wikipedia.org/wiki/Ken_Robinson_(educationalist)">Sir Ken Robinson's</a> educational philosophy</li>
-                <li>My biggest personal idol/hero is mythologist <a href="http://en.wikipedia.org/wiki/Joseph_campbell">Joseph Campbell</a></li>
+                <li>My biggest personal idol is mythologist <a href="http://en.wikipedia.org/wiki/Joseph_campbell">Joseph Campbell</a></li>
                 <li>I have a penchant for <a href="https://soundcloud.com/moootpoint/following">electronic</a> dance music, but my tastes range from classical to yodeling.</li>
                 <li>Favorite Sci-fi book is <a href="http://www.amazon.com/Moon-Harsh-Mistress-Robert-Heinlein/dp/0312863551">The Moon is a Harsh Mistress</a> by Robert Heinlein</li>
-                <li>Favorite quote is, "Don't sweat the petty things, and don't pet the sweaty things" &mdash; George Carlin</li>
-                <li>Favorite Buddhist monks are <a href="http://en.wikipedia.org/wiki/Thich_Nhat_Hanh">Thich Nhat Hanh</a>, <a href="http://en.wikipedia.org/wiki/Dalai_Lama">The Dalai Lama</a>, and <a href="http://en.wikipedia.org/wiki/Yongey_Mingyur_Rinpoche">Yongey Mingyur Rinpoche</a></li>
+                <li>Favorite quote:<br/>"Don't sweat the petty things, and don't pet the sweaty things" &mdash; George Carlin</li>
+                <li>Favorite monks are <a href="http://en.wikipedia.org/wiki/Thich_Nhat_Hanh">Thich Nhat Hanh</a>, <a href="http://en.wikipedia.org/wiki/Dalai_Lama">The Dalai Lama</a>, and <a href="http://en.wikipedia.org/wiki/Yongey_Mingyur_Rinpoche">Yongey Mingyur Rinpoche</a></li>
+                <li>Favorite Living philosopher is <a href="http://en.wikipedia.org/wiki/Daniel_Dennett">Daniel Dennett</a></li>
                 <li>I believe Han shot first</li>
                 <li>I cried when Firefly went off the air.</li>
                 <li>I'm both a cat and a dog person</li>
@@ -406,13 +358,13 @@
         <footer>
             <div id="stu_photo_container"><div id="stu_photo"></div></div>
             <div class="foot-item-wrapper">
-                <i class="icon-envelope"></i><email>jsrutledge@<span class="obfuscate">null</span>gmail.com</email>
+                <i class="icon-envelope"></i><email>jsrutledge@<span class="obfuscate">null</span>gmail<span class="obfuscate">yahoo</span>.com</email>
             </div>
             <div class="foot-item-wrapper">
-                <i class="icon-phone"></i><phone>512.797<span class="obfuscate">23null</span>.6262</phone>
+                <i class="icon-phone"></i><phone>512.797<span class="obfuscate">23null</span>.62<span class="obfuscate">45</span>62</phone>
             </div>
             <div class="foot-item-wrapper">
-                <i class="icon-home"></i>4401<span class="obfuscate">null</span> Green Cliffs Rd. Austin, TX 78746
+                <i class="icon-home"></i>4401<span class="obfuscate">null</span> Green Cliffs Rd. <span class="obfuscate">New York</span>Austin, TX 787<span class="obfuscate">59</span>46
             </div>
             <div class="foot-item-wrapper">
                 <i class="icon-github"></i><a href="https://github.com/mootPoint">my github</a>
@@ -429,9 +381,19 @@
     <script src="js/resume.js"></script>
     <script src="js/realshadow-min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap-lightbox.min.js"></script>
     <script type="text/javascript">
     $('.img-circle').realshadow();
     </script>
-
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-40130918-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 </body>
 </html>

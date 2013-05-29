@@ -4,6 +4,9 @@
 //                           SCROLL ILLUSION
 //============================================================================
 
+// preload critical background image to make sure illusion stays hidden
+var img = new Image(); img.src = "../img/egg_shell01.png";
+
 var docheight = $(document).height(),
     winheight = $(window).height(),
     winwidth  = $(window).width(),
@@ -20,7 +23,8 @@ barbox.css('right', offset);
 for(var i=1; i < bar_count; i++) {
     $('<div>')
         .attr('class', 'bar_black')
-        .css('background', 'url(../img/egg_shell_'+bg_options[Math.floor(Math.random()*3)]+'.png) repeat-y')
+        .css('background', 'url(../img/egg_shell01.png) repeat-y')
+        //.css('background', 'url(../img/egg_shell_'+bg_options[Math.floor(Math.random()*3)]+'.png) repeat-y')
         .appendTo('#illusion_bars');
 }
 
